@@ -1,9 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
-    { "source": "/api/:path*", "destination": "https://YOUR-API-HOST.onrender.com/api/:path*" },
-    { "source": "/uploads/:path*", "destination": "https://YOUR-API-HOST.onrender.com/uploads/:path*" },
-    { "source": "/sitemap.xml", "destination": "https://YOUR-API-HOST.onrender.com/sitemap.xml" },
+    { "source": "/api/:path*", "destination": "https://popsyy-ecommerce.onrender.com/api/:path*" },
+    { "source": "/uploads/:path*", "destination": "https://popsyy-ecommerce.onrender.com/uploads/:path*" },
+    { "source": "/sitemap.xml", "destination": "https://popsyy-ecommerce.onrender.com/sitemap.xml" },
     { "source": "/((?!assets/|images/|favicon.svg|robots.txt).*)", "destination": "/index.html" }
   ],
   "headers": [
