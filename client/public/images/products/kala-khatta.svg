@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" role="img" aria-label="POPSYY kala khatta ice pop">
+<defs>
+ <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C79BFF"/><stop offset=".55" stop-color="#8A3FFC"/><stop offset="1" stop-color="#4B0FA8"/></linearGradient>
+ <linearGradient id="s" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+ <linearGradient id="w" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#E9C58F"/><stop offset="1" stop-color="#C99A5B"/></linearGradient>
+ <filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#4B0FA8" flood-opacity=".45"/></filter>
+</defs>
+<g transform="rotate(12 220 300)">
+ <rect x="196" y="470" width="44" height="110" rx="20" fill="url(#w)"/>
+ <g filter="url(#sh)">
+  <path d="M130 110 Q132 58 190 50 L262 44 Q312 42 314 96 L318 460 Q318 492 286 494 L160 498 Q130 498 130 466 Z" fill="url(#g)"/>
+  <path d="M130 110 Q132 58 190 50 L262 44 Q312 42 314 96 L318 460 Q318 492 286 494 L160 498 Q130 498 130 466 Z" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="4"/>
+  <path d="M152 120 Q154 86 186 80 L196 80 L186 460 L160 460 Q152 460 152 450 Z" fill="url(#s)"/>
+  <path d="M284 100 L290 440" stroke="#fff" stroke-opacity=".35" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="150" cy="120" r="2" fill="#fff" opacity=".3"/><circle cx="187" cy="173" r="3" fill="#fff" opacity=".4"/><circle cx="224" cy="226" r="4" fill="#fff" opacity=".5"/><circle cx="151" cy="279" r="2" fill="#fff" opacity=".6"/><circle cx="188" cy="332" r="3" fill="#fff" opacity=".3"/><circle cx="225" cy="385" r="4" fill="#fff" opacity=".4"/><circle cx="152" cy="138" r="2" fill="#fff" opacity=".5"/><circle cx="189" cy="191" r="3" fill="#fff" opacity=".6"/><circle cx="226" cy="244" r="4" fill="#fff" opacity=".3"/><circle cx="153" cy="297" r="2" fill="#fff" opacity=".4"/><circle cx="190" cy="350" r="3" fill="#fff" opacity=".5"/><circle cx="227" cy="403" r="4" fill="#fff" opacity=".6"/><circle cx="154" cy="156" r="2" fill="#fff" opacity=".3"/><circle cx="191" cy="209" r="3" fill="#fff" opacity=".4"/><circle cx="228" cy="262" r="4" fill="#fff" opacity=".5"/><circle cx="155" cy="315" r="2" fill="#fff" opacity=".6"/><circle cx="192" cy="368" r="3" fill="#fff" opacity=".3"/><circle cx="229" cy="121" r="4" fill="#fff" opacity=".4"/><circle cx="156" cy="174" r="2" fill="#fff" opacity=".5"/><circle cx="193" cy="227" r="3" fill="#fff" opacity=".6"/><circle cx="230" cy="280" r="4" fill="#fff" opacity=".3"/><circle cx="157" cy="333" r="2" fill="#fff" opacity=".4"/><circle cx="194" cy="386" r="3" fill="#fff" opacity=".5"/><circle cx="231" cy="139" r="4" fill="#fff" opacity=".6"/><circle cx="158" cy="192" r="2" fill="#fff" opacity=".3"/><circle cx="195" cy="245" r="3" fill="#fff" opacity=".4"/>
+ </g>
+</g>
+<g opacity=".9">
+ <rect x="300" y="470" width="46" height="46" rx="10" fill="#E6F7FF" stroke="#fff" stroke-width="3" transform="rotate(18 323 493)" opacity=".85"/>
+ <rect x="318" y="410" width="30" height="30" rx="7" fill="#E6F7FF" stroke="#fff" stroke-width="3" transform="rotate(-14 333 425)" opacity=".75"/>
+</g>
+<path d="M60 420 q-10 -45 30 -60 q5 40 -30 60z" fill="#2E9E44"/><path d="M95 425 q30 -40 70 -22 q-35 28 -70 22z" fill="#3DBB55"/><g><ellipse cx="58" cy="480" rx="32" ry="35.2" fill="#2A0A4A"/><ellipse cx="46.8" cy="467.2" rx="8.96" ry="6.4" fill="#8E6BD6" opacity=".8"/></g><g><ellipse cx="110" cy="500" rx="30" ry="33.0" fill="#2A0A4A"/><ellipse cx="99.5" cy="488.0" rx="8.4" ry="6.0" fill="#8E6BD6" opacity=".8"/></g><g><ellipse cx="70" cy="535" rx="26" ry="28.6" fill="#2A0A4A"/><ellipse cx="60.9" cy="524.6" rx="7.280000000000001" ry="5.2" fill="#8E6BD6" opacity=".8"/></g><g><ellipse cx="125" cy="548" rx="22" ry="24.200000000000003" fill="#2A0A4A"/><ellipse cx="117.3" cy="539.2" rx="6.16" ry="4.4" fill="#8E6BD6" opacity=".8"/></g><g><ellipse cx="30" cy="520" rx="20" ry="22.0" fill="#2A0A4A"/><ellipse cx="23.0" cy="512.0" rx="5.6000000000000005" ry="4.0" fill="#8E6BD6" opacity=".8"/></g>
+</svg>

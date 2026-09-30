@@ -1,0 +1,121 @@
+@import 'tailwindcss';
+
+/* ===========================================================
+   POPSYY DESIGN SYSTEM
+   Derived from the brand references: saturated flavour gradients,
+   deep grape ink, heavy rounded display type, sticker/collectible cards.
+   =========================================================== */
+@theme {
+  --font-display: 'Bricolage Grotesque', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-hand: 'Caveat', 'Comic Sans MS', cursive;
+
+  --color-ink: #1c0a3d;
+  --color-grape: #2b0a6b;
+  --color-purple: #7b2ff7;
+  --color-violet: #9b4dff;
+  --color-pink: #ff2e93;
+  --color-magenta: #e0115f;
+  --color-lime: #d7ff3a;
+  --color-leaf: #7ed321;
+  --color-orange: #ff8a00;
+  --color-tangerine: #ff5e00;
+  --color-lemon: #ffe14d;
+  --color-cyan: #26c6ff;
+  --color-sky: #5cd3ff;
+  --color-blue: #1e6bff;
+  --color-cream: #fff6ec;
+  --color-paper: #fffbf5;
+  --color-muted: #6b5a8e;
+
+  --shadow-sticker: 5px 5px 0 0 #1c0a3d;
+  --shadow-sticker-lg: 8px 8px 0 0 #1c0a3d;
+  --shadow-sticker-sm: 3px 3px 0 0 #1c0a3d;
+  --radius-blob: 2rem;
+
+  --animate-float: float 5s ease-in-out infinite;
+  --animate-float-slow: float 8s ease-in-out infinite;
+  --animate-wiggle: wiggle 2.4s ease-in-out infinite;
+  --animate-marquee: marquee 28s linear infinite;
+  --animate-marquee-rev: marquee-rev 28s linear infinite;
+  --animate-spin-slow: spin 16s linear infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+    50% { transform: translateY(-14px) rotate(calc(var(--r, 0deg) + 3deg)); }
+  }
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-4deg); }
+    50% { transform: rotate(4deg); }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes marquee-rev {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
+  }
+}
+
+@layer base {
+  html { -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4 { @apply font-display; }
+  ::selection { background: var(--color-pink); color: white; }
+  :focus-visible { outline: 3px solid var(--color-purple); outline-offset: 3px; border-radius: 6px; }
+  img { max-width: 100%; }
+  input, select, textarea, button { font: inherit; }
+}
+
+@layer components {
+  .display { @apply font-display font-extrabold uppercase leading-[0.86] tracking-[-0.02em]; }
+  .hand { font-family: var(--font-hand); @apply font-bold normal-case tracking-normal; }
+  .container-pop { @apply mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-10; }
+
+  .btn {
+    @apply relative inline-flex select-none items-center justify-center gap-2 rounded-full border-[3px] border-ink px-6 py-3 font-display text-sm font-extrabold uppercase tracking-wide transition-[transform,box-shadow,background-color] duration-150 active:translate-x-[3px] active:translate-y-[3px] active:scale-[0.97] active:shadow-none disabled:pointer-events-none disabled:opacity-50;
+    box-shadow: var(--shadow-sticker-sm);
+  }
+  .btn:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 0 var(--color-ink); }
+  .btn-primary { @apply bg-pink text-white; }
+  .btn-dark { @apply bg-ink text-white; }
+  .btn-lime { @apply bg-lime text-ink; }
+  .btn-light { @apply bg-white text-ink; }
+  .btn-ghost { @apply border-transparent bg-transparent shadow-none; }
+  .btn-sm { @apply px-4 py-2 text-xs; }
+  .btn-lg { @apply px-8 py-4 text-base; }
+
+  .sticker { @apply rounded-[1.75rem] border-[3px] border-ink; box-shadow: var(--shadow-sticker); }
+  .chip { @apply inline-flex items-center gap-1 rounded-full border-2 border-ink bg-white px-3 py-1 text-xs font-bold uppercase tracking-wide; }
+  .label { @apply mb-1.5 block text-xs font-extrabold uppercase tracking-wider text-grape; }
+  .input {
+    @apply w-full rounded-2xl border-[3px] border-ink bg-white px-4 py-3 text-[15px] font-medium text-ink outline-none transition placeholder:text-muted/60 focus:border-purple focus:ring-4 focus:ring-purple/20;
+  }
+  .input-error { @apply border-magenta focus:border-magenta focus:ring-magenta/20; }
+  .card-flat { @apply rounded-3xl border-[3px] border-ink bg-white; }
+
+  .grain::after {
+    content: '';
+    position: absolute; inset: 0; pointer-events: none; opacity: .18; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .dots-bg {
+    background-image: radial-gradient(rgba(28, 10, 61, 0.12) 1.5px, transparent 1.5px);
+    background-size: 22px 22px;
+  }
+  .text-stroke { -webkit-text-stroke: 2px var(--color-ink); color: transparent; }
+  .text-stroke-white { -webkit-text-stroke: 2px white; color: transparent; }
+  .no-scrollbar { scrollbar-width: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+}
+
+/* Admin keeps the brand but calms down */
+.admin-scope .btn { box-shadow: 2px 2px 0 0 var(--color-ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+}

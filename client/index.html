@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#7B2FF7" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <title>POPSYY — Real Fruit Ice Pops. Big Flavour. Zero Boring.</title>
+    <meta name="description" content="Order POPSYY ice pops online — Lemon Lime, Orange, Cranberry and Kala Khatta. Build your own box and get it delivered frozen." />
+    <meta property="og:site_name" content="POPSYY" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/brand/hero-pops.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Caveat:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="preload" as="image" href="/images/brand/hero-pops.jpg" />
+    <style>
+      /* Boot loader — shows before JS; removed by React once the app is ready */
+      #pop-loader{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:#7B2FF7;transition:opacity .45s ease,visibility .45s}
+      #pop-loader.done{opacity:0;visibility:hidden}
+      #pop-loader .wrap{display:flex;flex-direction:column;align-items:center;gap:18px}
+      #pop-loader svg{width:84px;height:140px;overflow:visible}
+      #pop-loader .fill{animation:popfill 1.1s cubic-bezier(.6,0,.3,1) forwards;transform-origin:bottom;transform:scaleY(0)}
+      #pop-loader .word{font:800 44px/1 'Bricolage Grotesque',system-ui,sans-serif;color:#FFE14D;letter-spacing:.02em;transform:scale(0);animation:popword .4s 1.05s cubic-bezier(.3,1.8,.5,1) forwards}
+      @keyframes popfill{to{transform:scaleY(1)}}
+      @keyframes popword{to{transform:scale(1)}}
+      @media (prefers-reduced-motion:reduce){#pop-loader .fill{animation:none;transform:none}#pop-loader .word{animation:none;transform:none}}
+    </style>
+  </head>
+  <body>
+    <div id="pop-loader" aria-hidden="true">
+      <div class="wrap">
+        <svg viewBox="0 0 84 140">
+          <defs><clipPath id="pl-c"><path d="M8 20Q8 4 24 4H60Q76 4 76 20V96Q76 104 68 104H16Q8 104 8 96Z"/></clipPath>
+          <linearGradient id="pl-g" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#FF2E93"/><stop offset=".5" stop-color="#FF8A00"/><stop offset="1" stop-color="#D7FF3A"/></linearGradient></defs>
+          <rect x="34" y="100" width="16" height="38" rx="8" fill="#E9C58F"/>
+          <path d="M8 20Q8 4 24 4H60Q76 4 76 20V96Q76 104 68 104H16Q8 104 8 96Z" fill="rgba(255,255,255,.18)"/>
+          <g clip-path="url(#pl-c)"><rect class="fill" x="0" y="0" width="84" height="104" fill="url(#pl-g)"/></g>
+          <path d="M8 20Q8 4 24 4H60Q76 4 76 20V96Q76 104 68 104H16Q8 104 8 96Z" fill="none" stroke="#fff" stroke-width="4"/>
+        </svg>
+        <div class="word">POP!</div>
+      </div>
+    </div>
+    <div id="root"></div>
+    <noscript>POPSYY needs JavaScript to run. Please enable it to shop.</noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
